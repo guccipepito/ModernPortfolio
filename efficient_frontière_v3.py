@@ -26,10 +26,6 @@ end = '2023-12-31' # exemple est des données sur 5 ans
 prices_df= yf.download(' '.join(tickers), start, end)['Adj Close']
 returns_df = prices_df.pct_change()[1:]
 
-prices_df
-
-returns_df
-
 fig = plt.gcf()
 fig.set_size_inches(18.5, 10.5)
 fig.savefig('test2png.png', dpi=100)
